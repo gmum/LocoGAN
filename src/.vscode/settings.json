@@ -1,0 +1,41 @@
+{ 
+  "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"],
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": false,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "python.linting.enabled": true,
+  "editor.detectIndentation": false,
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "240",
+    "--experimental",
+    "--indent-size=4"
+  ],
+  "python.linting.pylintArgs": [
+    "--max-line-length",
+    "240",
+    "--enable=W0614",
+    "--disable=C0111",
+    "--disable=C0114",
+    "--disable=C0115",
+    "--disable=C0116",
+    "--generated-members=numpy.* ,torch.* "
+  ],
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "Conv",
+    "Unmap",
+    "arange",
+    "celeba",
+    "locogan",
+    "dtype",
+    "hparams",
+    "inplace",
+    "itertools",
+    "numpy",
+    "optim",
+    "tqdm"
+]
+}
