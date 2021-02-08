@@ -21,7 +21,7 @@ def run():
     makedirs(output_dir, exist_ok=True)
     print('Created output dir: ', output_dir)
 
-    name = f'{args.lr}_{args.batch_size}_{args.chunk_step}_{args.move_step}'
+    name = f'{args.lr}_{args.batch_size}'
     tb_logger = TensorBoardLogger(output_dir, name=name)
 
     callbacks = create_callbacks_and_evaluators(args)

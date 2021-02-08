@@ -7,8 +7,6 @@ def parse_args():
     parser.add_argument('--lr', type=float, default=2e-4, help='learning rate used for the experiments')
     parser.add_argument('--workers', type=int, default=8, help='number of data loading workers')
     parser.add_argument('--batch_size', type=int, default=64, help='input batch size')
-    parser.add_argument('--move_step', type=int, default=4, help='')
-    parser.add_argument('--chunk_step', type=int, default=4, help='')
     parser.add_argument('--image_size', type=int, default=128, help='the height / width of the whole image from the dataset')
     parser.add_argument('--chunk_size', type=int, default=64, help='the height / width of the input sub-image to network')
     parser.add_argument('--n_disc', type=int, default=1, help='describes how many discriminator steps for one generator step')
