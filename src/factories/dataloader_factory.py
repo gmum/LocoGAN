@@ -10,8 +10,6 @@ from transformations.image_to_tensor import ImageToTensor
 def get_dataloader(args) -> DataLoader:
     image_size = args.image_size
     chunk_size = args.chunk_size
-    move_step = args.move_step
-    chunk_step = args.chunk_step
 
     dataset_transforms = []
 
@@ -22,14 +20,8 @@ def get_dataloader(args) -> DataLoader:
         ]
 
     dataset_transforms += [
-        ImageRandomCropFactory().create(image_size, chunk_size, move_step, chunk_step)
+        ImageRandomCropFactory().create(image_size, chunk_size)
     ]
-
-    if args.chunk_step != 0:
-        print('Adding resize chunk step')
-        dataset_transforms += [
-            ImageResize(chunk_size)
-        ]
 
     dataset_transforms += [
         ImageToTensor()
